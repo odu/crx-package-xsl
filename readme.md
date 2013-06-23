@@ -1,4 +1,4 @@
-# CRX Package Vault XSL Helper
+# Adobe CRX / AEM / CQ Package Vault XSL Helper
 
 This is a helper XSL file that will help create the necessary CRX vault package files to create a package using XSLT.  It can be used to create the appropriate `jcr_root/.content.xml`, `META-INF/vault/` `properties.xml`, `filter.xml`, and optionally `nodetypes.cnd`, `config.xml`, and `definition/.content.xml` files.  To the best of my knowledge the optional files aren't really needed in current versions and are turned off by default, but this isn't based on anything concrete, only trail and error on AEM 5.6.
 
@@ -11,24 +11,24 @@ In your XSL file to generate a package, include the vault.xsl file, set the appr
 In the header area of your xsl file before any templates are defined:
 
 ```
-    <xsl:import href="vault.xsl"/>
+<xsl:import href="vault.xsl"/>
 
-    <!-- Vault Parameters -->
-    <xsl:variable name="package-name">Sample Package</xsl:variable>
-    <xsl:variable name="package-description">Sample Package</xsl:variable>
+<!-- Vault Parameters -->
+<xsl:variable name="package-name">Sample Package</xsl:variable>
+<xsl:variable name="package-description">Sample Package</xsl:variable>
 ```
 
 In a template that only runs once such as the below root template:
 
 ```
-    <xsl:template match="/">
+<xsl:template match="/">
 
-        <!-- Do You Own Package Actions -->
-        
-        <!-- Include Standard Vault Files -->
-        <xsl:call-template name="vault-files" />
+    <!-- Do You Own Package Actions -->
+    
+    <!-- Include Standard Vault Files -->
+    <xsl:call-template name="vault-files" />
 
-    </xsl:template>
+</xsl:template>
 ```
 
 ## Parameters
