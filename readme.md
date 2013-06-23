@@ -1,8 +1,8 @@
-# Adobe CRX / AEM / CQ Package Vault XSL Helper
+# Adobe CRX/AEM/CQ Package XSL Helper
 
 This is a helper XSL file that will help create the necessary CRX vault package files to create a package using XSLT.  It can be used to create the appropriate `jcr_root/.content.xml`, `META-INF/vault/` `properties.xml`, `filter.xml`, and optionally `nodetypes.cnd`, `config.xml`, and `definition/.content.xml` files.  To the best of my knowledge the optional files aren't really needed in current versions and are turned off by default, but this isn't based on anything concrete, only trail and error on AEM 5.6.
 
-**Installing packages can delete and modify data.  If the filters are wrong the package will happily delete a ton of data.**
+**Installing packages can delete and modify data.  If the filters are wrong the package will happily delete a ton of data.**  __This helper is unaffiliated with Adobe, and not supported.__
 
 ## Usage
 
