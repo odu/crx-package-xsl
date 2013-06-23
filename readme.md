@@ -6,7 +6,7 @@ This is a helper XSL file that will help create the necessary CRX vault package 
 
 ## Usage
 
-In your XSL file to generate a package, include the vault.xsl file, set the appropriate parameters and call the vault-files temlplate.
+In your XSL file to generate a package, include the vault.xsl file, set the appropriate parameters and call the vault-files template.
 
 In the header area of your xsl file before any templates are defined:
 
@@ -30,6 +30,8 @@ In a template that only runs once such as the below root template:
 
 </xsl:template>
 ```
+
+An example of it's usage can be found at [odu/crx-package-xsl-example](https://github.com/odu/crx-package-xsl-example) which is an Ant script that pipelines CSV > XML > Many XML Files > CRX Package Zip.
 
 ## Parameters
 
